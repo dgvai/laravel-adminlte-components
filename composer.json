@@ -1,0 +1,26 @@
+{
+    "name": "dgvai/laravel-adminlte-components",
+    "description": "Laravel Blade Components For AdminLTE Bootstrap Admin Template",
+    "type": "laravel-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jalal Uddin",
+            "email": "dgvai@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "DGvai\\BladeAdminLTE\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DGvai\\BladeAdminLTE\\BladeAdminLTEServiceProvider"
+            ]
+        }
+    }
+}
