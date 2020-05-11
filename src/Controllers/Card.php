@@ -9,13 +9,13 @@ class Card extends Component
     public $bg;
     public $title;
     public $collapsed, $removable, $maximizable, $disabled;
-    public $outline;
+    public $outline, $full;
 
     public function __construct(
         $bg, $title, 
         $collapsed = false, $removable = false, 
         $maximizable = false, $disabled = false,
-        $outline = false)
+        $outline = false, $full = false)
     {
         $this->bg = $bg;
         $this->title = $title;
@@ -24,6 +24,7 @@ class Card extends Component
         $this->maximiz = $maximizable;
         $this->disabled = $disabled;
         $this->outline = $outline;
+        $this->full = $full;
     }
 
     public function render()
