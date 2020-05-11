@@ -1,4 +1,4 @@
-<div class="card card-{{$bg}} {{$collapsed ? 'collapsed-card' : ''}}">
+<div class="card card-{{$bg}} {{$outline ? 'card-outline' : ''}} {{$collapsed ? 'collapsed-card' : ''}}">
     <div class="card-header" data-card-widget="collapse">
         <h3 class="card-title">{{$title}}</h3>
         <div class="card-tools">
@@ -26,7 +26,6 @@
                 @endif
             @endif
         </div>
-
     </div>
 
     <div class="card-body">
