@@ -9,7 +9,7 @@ class Alert extends Component
     public $type, $title;
     public $dismissable;
 
-    public function __construct($type = 'info', $dismissable=false, $title)
+    public function __construct($type = 'info', $dismissable = false, $title = 'Alert')
     {
         $this->type = $type;
         $this->title = $title;

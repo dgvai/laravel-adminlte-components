@@ -39,5 +39,6 @@ class BladeAdminLTEServiceProvider extends ServiceProvider
         Blade::component('dg-profile-widget', Components\ProfileWidget::class);
         Blade::component('dg-profile-widget-item', Components\ProfileWidgetItem::class);
         Blade::component('dg-alert', Components\Alert::class);
+        Blade::component('dg-callout', Components\Callout::class);
     }
 }
