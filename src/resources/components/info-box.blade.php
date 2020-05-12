@@ -1,5 +1,5 @@
-<div class="info-box {{$full ? 'bg-'.$grad ? 'gradient-' . '' .$bg : '' }}">
-    <span class="info-box-icon {{!$full ? 'bg-'.$bg : '' }}">
+<div class="info-box {{$background }}">
+    <span class="info-box-icon {{$foreground}}">
         <i class="{{$icon}}"></i>
     </span>
     <div class="info-box-content">

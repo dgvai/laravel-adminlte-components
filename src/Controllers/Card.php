@@ -12,16 +12,16 @@ class Card extends Component
     public $outline, $full;
 
     public function __construct(
-        $bg, $title, 
+        $bg = 'info', $title, 
         $collapsed = false, $removable = false, 
         $maximizable = false, $disabled = false,
         $outline = false, $full = false)
     {
         $this->bg = $bg;
         $this->title = $title;
-        $this->colla = $collapsed;
-        $this->remov = $removable;
-        $this->maximiz = $maximizable;
+        $this->collapsed = $collapsed;
+        $this->removable = $removable;
+        $this->maximizable = $maximizable;
         $this->disabled = $disabled;
         $this->outline = $outline;
         $this->full = $full;
