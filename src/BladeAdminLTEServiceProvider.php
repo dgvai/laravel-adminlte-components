@@ -41,5 +41,6 @@ class BladeAdminLTEServiceProvider extends ServiceProvider
         Blade::component('dg-alert', Components\Alert::class);
         Blade::component('dg-callout', Components\Callout::class);
         Blade::component('dg-progress', Components\Progress::class);
+        Blade::component('dg-modal', Components\Modal::class);
     }
 }
