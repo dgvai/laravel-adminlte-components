@@ -34,5 +34,7 @@ class BladeAdminLTEServiceProvider extends ServiceProvider
         Blade::component('dg-card', Components\Card::class);
         Blade::component('dg-info-box', Components\InfoBox::class);
         Blade::component('dg-small-box', Components\SmallBox::class);
+        Blade::component('dg-profile-flat', Components\ProfileFlat::class);
+        Blade::component('dg-profile-flat-item', Components\ProfileFlatItem::class);
     }
 }
