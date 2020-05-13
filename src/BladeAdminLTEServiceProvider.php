@@ -39,6 +39,8 @@ class BladeAdminLTEServiceProvider extends ServiceProvider
         Blade::component('dg-select2', Components\Select2::class);
         Blade::component('dg-select-icon', Components\SelectIcon::class);
         Blade::component('dg-option', Components\Option::class);
+        Blade::component('dg-input-switch', Components\InputSwitch::class);
+        Blade::component('dg-input-tag', Components\InputTag::class);
         Blade::component('dg-card', Components\Card::class);
         Blade::component('dg-info-box', Components\InfoBox::class);
         Blade::component('dg-small-box', Components\SmallBox::class);
