@@ -6,7 +6,7 @@
 [![License](https://poser.pugx.org/dgvai/laravel-adminlte-components/license)](https://packagist.org/packages/dgvai/laravel-adminlte-components)
 [![Monthly Downloads](https://poser.pugx.org/dgvai/laravel-adminlte-components/d/monthly)](https://packagist.org/packages/dgvai/laravel-adminlte-components)
 [![Daily Downloads](https://poser.pugx.org/dgvai/laravel-adminlte-components/d/daily)](https://packagist.org/packages/dgvai/laravel-adminlte-components)
-[![composer.lock](https://poser.pugx.org/dgvai/laravel-adminlte-components/composerlock)](https://packagist.org/packages/dgvai/laravel-adminlte-components
+[![composer.lock](https://poser.pugx.org/dgvai/laravel-adminlte-components/composerlock)](https://packagist.org/packages/dgvai/laravel-adminlte-components)
 
 This package contains [Laravel Blade Components](https://laravel.com/docs/7.x/blade#components) for [AdminLTE 3](https://adminlte.io/docs/3.0/) free Boostrap admin panel UI Kit. Since, blade components are only available after Laravel 7, thus only laravel 7.x+ can use this package.
 
@@ -62,6 +62,29 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 **EXAMPLE**
 ```html
 <x-dg-info-box bg="success" title="Yo title" text="123" icon="fas fa-star" :full="true" :grad="true"/>
+```
+
+**SMALL BOX**
+![Small Box](assets/small-box.png)
+
+**MINIMUM USAGE**  
+```html
+<x-dg-small-box title="New User" text="500" />
+```
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE | DETAILS                                                                                    | REQUIRED | TYPE    |
+|-----------|--------------------------------------------------------------------------------------------|----------|---------|
+| title     | Title of the info box                                                                      | true     | string  |
+| text      | Data text                                                                                  | true     | string  |
+| bg        | Background Color of the icon. This follows bootstrap colors: success, info, primary... etc | false    | string  |
+| icon      | The fontawesome icon class. Eg. ``fas fa-star``, ``fas fa-user-plus``                      | false    | string  |
+| url       | The url to follow.                                                                         | false    | string  |
+| urlText   | Text of the HyperLink.                                                                     | false    | string  |
+| loading   | Set loading state ``true/false``                                                           | false    | boolean |
+
+**EXAMPLE**
+```html
+<x-dg-small-box title="Small box" text="500" bg="warning" url="#" urlText="See More" loading="false" />
 ```
 
 ## Changelog
