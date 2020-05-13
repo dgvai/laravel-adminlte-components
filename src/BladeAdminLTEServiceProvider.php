@@ -30,6 +30,10 @@ class BladeAdminLTEServiceProvider extends ServiceProvider
 
     private function loadComponents()
     {
+        /**
+         * FORM COMPONENTS
+         */
+
         Blade::component('dg-input', Components\Input::class);
         Blade::component('dg-input-file', Components\InputFile::class);
         Blade::component('dg-input-color', Components\InputColor::class);
@@ -41,6 +45,12 @@ class BladeAdminLTEServiceProvider extends ServiceProvider
         Blade::component('dg-option', Components\Option::class);
         Blade::component('dg-input-switch', Components\InputSwitch::class);
         Blade::component('dg-input-tag', Components\InputTag::class);
+        Blade::component('dg-submit', Components\Submit::class);
+
+        /**
+         * WIDGETS
+         */
+        
         Blade::component('dg-card', Components\Card::class);
         Blade::component('dg-info-box', Components\InfoBox::class);
         Blade::component('dg-small-box', Components\SmallBox::class);
