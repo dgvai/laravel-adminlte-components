@@ -4,7 +4,7 @@ namespace DGvai\BladeAdminLTE\Components;
 
 use Illuminate\View\Component;
 
-class Select2 extends Component
+class Select extends Component
 {
     public $id, $name, $label;
     public $topclass, $inputclass;

@@ -13,10 +13,3 @@
         </span>
     @enderror
 </div>
-
-@section('js')
-    @parent
-    <script>
-        $(()=>{ $('{{$id}}').select2({ theme: 'bootstrap4' }); })
-    </script>
-@endsection
