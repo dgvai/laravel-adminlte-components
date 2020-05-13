@@ -35,6 +35,10 @@ class BladeAdminLTEServiceProvider extends ServiceProvider
         Blade::component('dg-input-color', Components\InputColor::class);
         Blade::component('dg-input-date', Components\InputDate::class);
         Blade::component('dg-textarea', Components\Textarea::class);
+        Blade::component('dg-select', Components\Select::class);
+        Blade::component('dg-select2', Components\Select2::class);
+        Blade::component('dg-select-icon', Components\SelectIcon::class);
+        Blade::component('dg-option', Components\Option::class);
         Blade::component('dg-card', Components\Card::class);
         Blade::component('dg-info-box', Components\InfoBox::class);
         Blade::component('dg-small-box', Components\SmallBox::class);

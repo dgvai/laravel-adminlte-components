@@ -6,12 +6,16 @@ use Illuminate\View\Component;
 
 class Option extends Component
 {
-    public $value;
+    public $value, $icon, $content;
     public $selected, $disabled;
 
-    public function __construct($value = null, $selected, $disabled)
+    public function __construct(
+        $value = null, $icon = false, $content = null,
+        $selected = false, $disabled = false)
     {
         $this->value = $value;
+        $this->icon = $icon;
+        $this->content = $content;
         $this->selected = $selected;
         $this->disabled = $disabled;
     }
