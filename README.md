@@ -42,8 +42,8 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 
 ### Widgets
 **INFO BOX**
-![Info Box](assets\info-box.png)
-![Info Box Full](assets\info-box-full.png)
+![Info Box](assets/info-box.png)
+![Info Box Full](assets/info-box-full.png)
 
 **MINIMUM USAGE**  
 ```html
