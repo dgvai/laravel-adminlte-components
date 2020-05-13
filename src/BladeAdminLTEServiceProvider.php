@@ -19,13 +19,9 @@ class BladeAdminLTEServiceProvider extends ServiceProvider
 
     private function publishers()
     {
-        // $this->publishes([
-        //     __DIR__.'/config/larataller.php' => config_path('larataller.php'),
-        // ], 'larataller');
-
-        // $this->publishes([
-        //     __DIR__.'/resources/views' => base_path('resources/views/vendor/larataller'),
-        // ], 'larataller-views');
+        $this->publishes([
+            __DIR__.'/resources/components' => base_path('resources/views/vendor/adminlte-components'),
+        ], 'adminlte-dg-components');
     }
 
     private function loadComponents()
@@ -63,5 +59,6 @@ class BladeAdminLTEServiceProvider extends ServiceProvider
         Blade::component('dg-callout', Components\Callout::class);
         Blade::component('dg-progress', Components\Progress::class);
         Blade::component('dg-modal', Components\Modal::class);
+        Blade::component('dg-datatable', Components\Datatable::class);
     }
 }
