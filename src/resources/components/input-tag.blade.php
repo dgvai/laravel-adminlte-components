@@ -4,6 +4,12 @@
     data-role="tagsinput" id="{{$id}}" name="{{$name}}"
     {{($required) ? 'required' : '' }} 
     {{($disabled) ? 'disabled' : '' }} />
+
+    @error($name)
+        <span class="invalid-feedback d-block" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+    @enderror
 </div>
 
 @section('js')
