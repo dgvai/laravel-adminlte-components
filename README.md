@@ -30,6 +30,13 @@ This package contains [Laravel Blade Components](https://laravel.com/docs/7.x/bl
             - [**PROFILE WIDGET**](#profile-widget)
             - [**MODAL**](#modal)
             - [**DATATABLE**](#datatable)
+        - [Form Components](#form-components)
+            - [INPUT](#input)
+            - [INPUT-FILE](#input-file)
+            - [INPUT-COLOR](#input-color)
+            - [INPUT-DATE](#input-date)
+            - [INPUT-SWITCH](#input-switch)
+            - [INPUT-TAG](#input-tag)
     - [Changelog](#changelog)
     - [License](#license)
 
@@ -271,6 +278,140 @@ $(()=>{
 | hoverable | is hoverable? ``true/false``  | false    | boolean |
 | condensed | is condensed? ``true/false``  | false    | boolean |
 | footer    | has footer? ``true/false``    | false    | boolean |
+
+### Form Components
+
+#### INPUT
+**USAGE**
+```html
+<x-dg-input />
+```
+
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| type        | Input Type                      | text        | string  |
+| id          | Input ID                        | null        | string  |
+| name        | Input name                      | null        | string  |
+| label       | Input Label                     | Input Label | string  |
+| placeholder | Input placeholder               | null        | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+| value       | Input value                     | null        | string  |
+| disabled    | is disabled?                    | false       | boolean |
+| required    | is required?                    | false       | boolean |
+
+#### INPUT-FILE
+**REQUIRES**  
+[bs-custom-file-input.min.js](https://www.npmjs.com/package/bs-custom-file-input)  
+
+**USAGE**
+```html
+<x-dg-input-file />
+```
+
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| id          | Input ID                        | null        | string  |
+| name        | Input name                      | null        | string  |
+| label       | Input Label                     | Input Label | string  |
+| placeholder | Input placeholder               | null        | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+| value       | Input value                     | null        | string  |
+| disabled    | is disabled?                    | false       | boolean |
+| required    | is required?                    | false       | boolean |
+| multiple    | is multiple?                    | false       | boolean |
+
+#### INPUT-COLOR
+**REQUIRES**  
+[bootstrap-colorpicker](https://www.npmjs.com/package/bootstrap-colorpicker)  
+
+**USAGE**
+```html
+<x-dg-input-color id="myID" />
+```
+
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| id          | Input ID                        | null        | string  |
+| name        | Input name                      | null        | string  |
+| label       | Input Label                     | Input Label | string  |
+| placeholder | Input placeholder               | null        | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+| value       | Input value                     | null        | string  |
+| disabled    | is disabled?                    | false       | boolean |
+| required    | is required?                    | false       | boolean |
+
+#### INPUT-DATE
+**REQUIRES**  
+[tempusdominus-bootstrap-4](https://tempusdominus.github.io/bootstrap-4/)  
+
+**USAGE**
+```html
+<x-dg-input-date id="myID" />
+```
+
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| id          | Input ID                        | null        | string  |
+| name        | Input name                      | null        | string  |
+| label       | Input Label                     | Input Label | string  |
+| placeholder | Input placeholder               | null        | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+| value       | Input value                     | null        | string  |
+| disabled    | is disabled?                    | false       | boolean |
+| required    | is required?                    | false       | boolean |
+| format      | [Moment.js](https://momentjs.com/docs/#/displaying/format/) datetime format       | YYYY-MM-DD  | string  |
+
+#### INPUT-SWITCH
+**REQUIRES**  
+[bootstrap-switch](https://bttstrp.github.io/bootstrap-switch/)  
+
+**USAGE**
+```html
+<x-dg-input-switch/>
+```
+
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| id          | Input ID                        | null        | string  |
+| name        | Input name                      | null        | string  |
+| label       | Input Label                     | Input Label | string  |
+| placeholder | Input placeholder               | null        | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+| disabled    | is disabled?                    | false       | boolean |
+| required    | is required?                    | false       | boolean |
+| checked     | is checked?                     | false       | boolean |
+
+#### INPUT-TAG
+**REQUIRES**  
+[bootstrap-tagsinput](https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/)  
+
+**USAGE**
+```html
+<x-dg-input-tag/>
+```
+
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| id          | Input ID                        | null        | string  |
+| name        | Input name                      | null        | string  |
+| label       | Input Label                     | Input Label | string  |
+| placeholder | Input placeholder               | null        | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+| disabled    | is disabled?                    | false       | boolean |
+| required    | is required?                    | false       | boolean |
+| max         | max tag count                   | 10          | integer |
 
 
 ## Changelog
