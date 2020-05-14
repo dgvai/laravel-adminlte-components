@@ -182,25 +182,32 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 **PROFILE FLAT**  
 ![Alerts](assets/prof-1.png)
 
-**MINIMUM USAGE**  
+**USAGE**  
 ```html
-<x-dg-profile-flat img="https://via.placeholder.com/150" name="John Doe" desc="User Description">
-        <x-dg-profile-flat-item title="yo yo" text="2" url="#" />
-        <x-dg-profile-flat-item title="yo yo 2" text="ggf" />
+<x-dg-profile-flat img="https://via.placeholder.com/150" name="Nadia Carmicheal" desc="Lead Developer">
+    <x-dg-profile-flat-item title="Projects" text="31" url="#" badge="primary"/>
+    <x-dg-profile-flat-item title="Tasks" text="5" />
+    <x-dg-profile-flat-item title="Completed Projects" text="12" badge="success" />
+    <x-dg-profile-flat-item title="Followers" text="842" badge="danger" />
 </x-dg-profile-flat>
 ```
-**ALL AVAILABLE ATTRIBUTES**  
-| ATTRIBUTE | DETAILS                                                             | REQUIRED | TYPE    |
-|-----------|---------------------------------------------------------------------|----------|---------|
-| bg        | Type of background. Boostrap backgd: success, info, primary,... etc | false    | string  |
-| size      | Size or progress bar: sm, xs, xxs                                   | false    | string  |
-| value     | Value of progress.                                                  | true     | numeric |
-| stripped  | Is stripped design? ``true/false``                                  | false    | boolean |
-| vertical  | Is vertical? ``true/false``                                         | false    | boolean |
 
-**EXAMPLE**
+**PROFILE WIDGET**  
+![Alerts](assets/prof-23.png)
+
+**USAGE**  
 ```html
-<x-dg-progress value="56" bg="danger" size="sm" :stripped="true" :vertical="false"/>
+<x-dg-profile-widget img="https://via.placeholder.com/150" name="Alexander Prince" desc="Founder CEO" bg="info">
+    <x-dg-profile-widget-item title="followers" text="533"/>
+    <x-dg-profile-widget-item title="sales" text="20" col="4"/>
+    <x-dg-profile-widget-item title="inbox" text="0"/>
+</x-dg-profile-widget>
+
+<x-dg-profile-widget img="https://via.placeholder.com/150" name="Elizabeth Pierce" desc="Founder CEO" cover="https://via.placeholder.com/150">
+    <x-dg-profile-widget-item title="followers" text="533"/>
+    <x-dg-profile-widget-item title="sales" text="20" col="4"/>
+    <x-dg-profile-widget-item title="inbox" text="0"/>
+</x-dg-profile-widget>
 ```
 
 ## Changelog
