@@ -41,9 +41,9 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 ## Components
 
 ### Widgets
-**INFO BOX**
-![Info Box](assets/info-box.png)
-![Info Box Full](assets/info-box-full.png)
+**INFO BOX**  
+![Info Box](assets/info-box.png)  
+![Info Box Full](assets/info-box-full.png)  
 
 **MINIMUM USAGE**  
 ```html
@@ -64,7 +64,7 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 <x-dg-info-box bg="success" title="Yo title" text="123" icon="fas fa-star" :full="true" :grad="true"/>
 ```
 
-**SMALL BOX**
+**SMALL BOX**  
 ![Small Box](assets/small-box.png)
 
 **MINIMUM USAGE**  
@@ -85,6 +85,122 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 **EXAMPLE**
 ```html
 <x-dg-small-box title="Small box" text="500" bg="warning" url="#" urlText="See More" loading="false" />
+```
+
+**CARDS**  
+![Cards](assets/cards.png)
+
+**MINIMUM USAGE**  
+```html
+<x-dg-card title="Title">
+    ...
+</x-dg-card>
+```
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                                                                                    | REQUIRED | TYPE    |
+|-------------|--------------------------------------------------------------------------------------------|----------|---------|
+| title       | Title of the Card                                                                          | true     | string  |
+| bg          | Background Color of the icon. This follows bootstrap colors: success, info, primary... etc | false    | string  |
+| collapsed   | Is Collapsed? ``true/false``                                                               | false    | boolean |
+| removable   | Is removable? ``true/false``                                                               | false    | boolean |
+| maximizable | Is maximizable? ``true/false``                                                             | false    | boolean |
+| disabled    | Is disabled? ``true/false``                                                                | false    | boolean |
+| outline     | Is outlined? ``true/false``                                                                | false    | boolean |
+| full        | Is full background? ``true/false``                                                         | false    | boolean |
+
+**EXAMPLE**
+```html
+<x-dg-card title="Title" bg="primary" :outline="true" :full="true" :collapsed="false" :maximizable="true"           :removable="true" :disabled="false">
+    ...
+</x-dg-card>
+```
+
+**ALERT**  
+![Alerts](assets/alert.png)
+
+**MINIMUM USAGE**  
+```html
+<x-dg-alert title="Alert!">
+    This is alert
+</x-dg-alert>
+```
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                                                       | REQUIRED | TYPE    |
+|-------------|---------------------------------------------------------------|----------|---------|
+| title       | Title of the Alert                                            | true     | string  |
+| type        | Type of alert. Boostrap types: success, info, primary,... etc | false    | string  |
+| dismissable | Is the alert dismissable? ``true/false``                      | false    | boolean |
+
+**EXAMPLE**
+```html
+<x-dg-alert type="danger" title="Error!" :dismissable="true">
+    This is alert
+</x-dg-alert>
+```
+
+**CALLOUT**  
+![Alerts](assets/callout.png)
+
+**MINIMUM USAGE**  
+```html
+<x-dg-callout>This is callout</x-dg-callout>
+```
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE | DETAILS                                                       | REQUIRED | TYPE   |
+|-----------|---------------------------------------------------------------|----------|--------|
+| title     | Title of the Callout                                          | false    | string |
+| type      | Type of alert. Boostrap types: success, info, primary,... etc | false    | string |
+
+**EXAMPLE**
+```html
+<x-dg-callout type="warning" title="Oops!">
+    This is callout
+</x-dg-callout>
+```
+
+**PROGRESS**  
+![Alerts](assets/progress.png)
+
+**MINIMUM USAGE**  
+```html
+<x-dg-progress value="56"/>
+```
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE | DETAILS                                                             | REQUIRED | TYPE    |
+|-----------|---------------------------------------------------------------------|----------|---------|
+| bg        | Type of background. Boostrap backgd: success, info, primary,... etc | false    | string  |
+| size      | Size or progress bar: sm, xs, xxs                                   | false    | string  |
+| value     | Value of progress.                                                  | true     | numeric |
+| stripped  | Is stripped design? ``true/false``                                  | false    | boolean |
+| vertical  | Is vertical? ``true/false``                                         | false    | boolean |
+
+**EXAMPLE**
+```html
+<x-dg-progress value="56" bg="danger" size="sm" :stripped="true" :vertical="false"/>
+```
+
+**PROFILE FLAT**  
+![Alerts](assets/prof-1.png)
+
+**MINIMUM USAGE**  
+```html
+<x-dg-profile-flat img="https://via.placeholder.com/150" name="John Doe" desc="User Description">
+        <x-dg-profile-flat-item title="yo yo" text="2" url="#" />
+        <x-dg-profile-flat-item title="yo yo 2" text="ggf" />
+</x-dg-profile-flat>
+```
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE | DETAILS                                                             | REQUIRED | TYPE    |
+|-----------|---------------------------------------------------------------------|----------|---------|
+| bg        | Type of background. Boostrap backgd: success, info, primary,... etc | false    | string  |
+| size      | Size or progress bar: sm, xs, xxs                                   | false    | string  |
+| value     | Value of progress.                                                  | true     | numeric |
+| stripped  | Is stripped design? ``true/false``                                  | false    | boolean |
+| vertical  | Is vertical? ``true/false``                                         | false    | boolean |
+
+**EXAMPLE**
+```html
+<x-dg-progress value="56" bg="danger" size="sm" :stripped="true" :vertical="false"/>
 ```
 
 ## Changelog
