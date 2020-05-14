@@ -13,7 +13,7 @@ class TextEditor extends Component
     public $def_fonts = ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Impact', 'Montserrat',  'Open Sans', 'Ubuntu', 'Rajdhani'];
 
     public function __construct(
-            $id = null, $name = null,
+            $id, $name = null,
             $label = 'Input Label', $placeholder = null,
             $topclass = null, $inputclass = null,
             $body = null, $disabled = false, $required = false,

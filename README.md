@@ -37,6 +37,13 @@ This package contains [Laravel Blade Components](https://laravel.com/docs/7.x/bl
             - [INPUT-DATE](#input-date)
             - [INPUT-SWITCH](#input-switch)
             - [INPUT-TAG](#input-tag)
+            - [SELECT](#select)
+            - [SELECT2](#select2)
+            - [SELECT-ICON](#select-icon)
+            - [TEXTAREA](#textarea)
+            - [TEXT-EDITOR](#text-editor)
+            - [SUBMIT](#submit)
+    - [Summary](#summary)
     - [Changelog](#changelog)
     - [License](#license)
 
@@ -412,6 +419,166 @@ $(()=>{
 | disabled    | is disabled?                    | false       | boolean |
 | required    | is required?                    | false       | boolean |
 | max         | max tag count                   | 10          | integer |
+
+
+#### SELECT 
+
+**USAGE**
+```html
+<x-dg-select id="myID">
+    <x-dg-option value="val">Text</x-dg-option>
+</x-dg-select>
+```
+
+**ALL AVAILABLE ATTRIBUTES: SELECT**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| id          | Input ID                        | null        | string  |
+| name        | Input name                      | null        | string  |
+| label       | Input Label                     | Input Label | string  |
+| placeholder | Input placeholder               | null        | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+| disabled    | is disabled?                    | false       | boolean |
+| required    | is required?                    | false       | boolean |
+| multiple    | is multiple?                    | false       | boolean |
+
+**ALL AVAILABLE ATTRIBUTES: OPTION**  
+| ATTRIBUTE | DETAILS         | DEFAULT | TYPE    |
+|-----------|-----------------|---------|---------|
+| value     | value of option | null    | string  |
+| selected  | is selected?    | false   | boolean |
+| disabled  | is disabled?    | false   | boolean |
+
+#### SELECT2 
+**REQUIRES**  
+[select2](https://select2.org/)  
+
+**USAGE**
+```html
+<x-dg-select2 id="myID">
+    <x-dg-option value="val">Text</x-dg-option>
+</x-dg-select2>
+```
+
+**ALL AVAILABLE ATTRIBUTES: SELECT**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| id          | Input ID                        | null        | string  |
+| name        | Input name                      | null        | string  |
+| label       | Input Label                     | Input Label | string  |
+| placeholder | Input placeholder               | null        | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+| disabled    | is disabled?                    | false       | boolean |
+| required    | is required?                    | false       | boolean |
+| multiple    | is multiple?                    | false       | boolean |
+
+**ALL AVAILABLE ATTRIBUTES: OPTION**  
+| ATTRIBUTE | DETAILS         | DEFAULT | TYPE    |
+|-----------|-----------------|---------|---------|
+| value     | value of option | null    | string  |
+| selected  | is selected?    | false   | boolean |
+| disabled  | is disabled?    | false   | boolean |
+
+#### SELECT-ICON 
+**REQUIRES**  
+[bootstrap-select](https://developer.snapappointments.com/bootstrap-select/)  
+
+**USAGE**
+```html
+<x-dg-select-icon id="myID">
+    <x-dg-option value="val" icon="true" content="fas fa-star">Text</x-dg-option>
+</x-dg-select-icon>
+```
+
+**ALL AVAILABLE ATTRIBUTES: SELECT**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| id          | Input ID                        | null        | string  |
+| name        | Input name                      | null        | string  |
+| label       | Input Label                     | Input Label | string  |
+| placeholder | Input placeholder               | null        | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+| disabled    | is disabled?                    | false       | boolean |
+| required    | is required?                    | false       | boolean |
+| multiple    | is multiple?                    | false       | boolean |
+
+**ALL AVAILABLE ATTRIBUTES: OPTION**  
+| ATTRIBUTE | DETAILS         | DEFAULT | TYPE    |
+|-----------|-----------------|---------|---------|
+| value     | value of option | null    | string  |
+| icon      | has icon?       | false   | boolean |
+| content   | icon class      | null    | string  |
+| selected  | is selected?    | false   | boolean |
+| disabled  | is disabled?    | false   | boolean |
+
+#### TEXTAREA 
+
+**USAGE**
+```html
+<x-dg-textarea>Hi,,,</x-dg-textarea>
+```
+
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| id          | Input ID                        | null        | string  |
+| name        | Input name                      | null        | string  |
+| label       | Input Label                     | Input Label | string  |
+| placeholder | Input placeholder               | null        | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+| disabled    | is disabled?                    | false       | boolean |
+| required    | is required?                    | false       | boolean |
+| rows        | textarea rows                   | 10          | integer |
+
+#### TEXT-EDITOR
+**REQUIRES**  
+[summernote](https://summernote.org/)  
+
+**USAGE**
+```html
+<x-dg-text-editor id="myEditor"/>
+```
+
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| id          | Input ID                        | null        | string  |
+| name        | Input name                      | null        | string  |
+| label       | Input Label                     | Input Label | string  |
+| placeholder | Input placeholder               | null        | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+| disabled    | is disabled?                    | false       | boolean |
+| required    | is required?                    | false       | boolean |
+| body        | texteditor text body            | null        | long text |
+| height      | texteditor height               | 800         | integer |
+| fonts       | set custom fonts                | null        | array   |
+
+**Example Fonts Array**
+```php
+    $fonts = ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Impact', 'Montserrat',  'Open Sans'];
+```
+
+#### SUBMIT
+```html
+<x-dg-submit />
+```
+
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| type      | button type: success, primary, ...,etc | info    | string |
+| label     | button label                           | Submit  | string |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+
+## Summary
+This document might not be well-documented. I will happily accept any documentation pull-requests.  
+> PULL REQUESTS for new components should be in non-master branch
 
 
 ## Changelog
