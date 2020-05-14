@@ -20,6 +20,16 @@ This package contains [Laravel Blade Components](https://laravel.com/docs/7.x/bl
     - [Configurations](#configurations)
     - [Components](#components)
         - [Widgets](#widgets)
+            - [**INFO BOX**](#info-box)
+            - [**SMALL BOX**](#small-box)
+            - [**CARDS**](#cards)
+            - [**ALERT**](#alert)
+            - [**CALLOUT**](#callout)
+            - [**PROGRESS**](#progress)
+            - [**PROFILE FLAT**](#profile-flat)
+            - [**PROFILE WIDGET**](#profile-widget)
+            - [**MODAL**](#modal)
+            - [**DATATABLE**](#datatable)
     - [Changelog](#changelog)
     - [License](#license)
 
@@ -41,7 +51,8 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 ## Components
 
 ### Widgets
-**INFO BOX**  
+
+#### **INFO BOX**  
 ![Info Box](assets/info-box.png)  
 ![Info Box Full](assets/info-box-full.png)  
 
@@ -64,7 +75,7 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 <x-dg-info-box bg="success" title="Yo title" text="123" icon="fas fa-star" :full="true" :grad="true"/>
 ```
 
-**SMALL BOX**  
+#### **SMALL BOX**  
 ![Small Box](assets/small-box.png)
 
 **MINIMUM USAGE**  
@@ -87,7 +98,7 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 <x-dg-small-box title="Small box" text="500" bg="warning" url="#" urlText="See More" loading="false" />
 ```
 
-**CARDS**  
+#### **CARDS**  
 ![Cards](assets/cards.png)
 
 **MINIMUM USAGE**  
@@ -115,7 +126,7 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 </x-dg-card>
 ```
 
-**ALERT**  
+#### **ALERT**  
 ![Alerts](assets/alert.png)
 
 **MINIMUM USAGE**  
@@ -138,7 +149,7 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 </x-dg-alert>
 ```
 
-**CALLOUT**  
+#### **CALLOUT**  
 ![Alerts](assets/callout.png)
 
 **MINIMUM USAGE**  
@@ -158,7 +169,7 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 </x-dg-callout>
 ```
 
-**PROGRESS**  
+#### **PROGRESS**  
 ![Alerts](assets/progress.png)
 
 **MINIMUM USAGE**  
@@ -179,7 +190,7 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 <x-dg-progress value="56" bg="danger" size="sm" :stripped="true" :vertical="false"/>
 ```
 
-**PROFILE FLAT**  
+#### **PROFILE FLAT**  
 ![Alerts](assets/prof-1.png)
 
 **USAGE**  
@@ -192,7 +203,7 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
 </x-dg-profile-flat>
 ```
 
-**PROFILE WIDGET**  
+#### **PROFILE WIDGET**  
 ![Alerts](assets/prof-23.png)
 
 **USAGE**  
@@ -209,6 +220,58 @@ Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Lar
     <x-dg-profile-widget-item title="inbox" text="0"/>
 </x-dg-profile-widget>
 ```
+
+#### **MODAL**  
+
+**MINIMUM USAGE**  
+```html
+<x-dg-modal id="login_modal" title="Modal Title">
+    ...
+</x-dg-modal>
+```
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE | DETAILS                            | REQUIRED | TYPE    |
+|-----------|------------------------------------|----------|---------|
+| id        | ID of modal                        | true     | string  |
+| title     | Title of modal                     | true     | string  |
+| size      | modal size: sm,lg,fluid            | false    | string  |
+| centered  | is centered? ``true/false``        | false    | boolean |
+| index     | No of index. (Modal up on a modal) | false    | integer |
+
+**EXAMPLE**
+```html
+<x-dg-modal id="login_modal" title="Modal Title" size="sm" :centered="true" index="1">
+    ...
+</x-dg-modal>
+```
+
+#### **DATATABLE**  
+
+**MINIMUM USAGE**  
+```html
+<x-dg-datatable id="sales-table" :heads="['#','Name','Phone','Actions']"/>
+...
+
+<script>
+$(()=>{
+   $('#sales-table').Datatable({
+       ...
+       ...
+   });
+});
+</script>
+```
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE | DETAILS                       | REQUIRED | TYPE    |
+|-----------|-------------------------------|----------|---------|
+| id        | ID of the table               | true     | string  |
+| heads     | Array of the headings (thead) | true     | array   |
+| beautify  | to beautify? ``true/false``   | false    | boolean |
+| bordered  | is bordered? ``true/false``   | false    | boolean |
+| hoverable | is hoverable? ``true/false``  | false    | boolean |
+| condensed | is condensed? ``true/false``  | false    | boolean |
+| footer    | has footer? ``true/false``    | false    | boolean |
+
 
 ## Changelog
 
