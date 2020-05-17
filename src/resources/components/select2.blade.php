@@ -3,7 +3,7 @@
     <select class="form-control {{$inputclass}} @error($name) is-invalid @enderror" 
         id="{{$id}}" name="{{$name}}" style="width:100%" 
         {{($required) ? 'required' : '' }} 
-        {{($disabled) ? 'disabled' : '' }}>
+        {{($disabled) ? 'disabled' : '' }}
         {{($multiple) ? 'multiple' : '' }}>
         {{$slot}}
     </select>
@@ -17,6 +17,6 @@
 @section('js')
     @parent
     <script>
-        $(()=>{ $('{{$id}}').select2({ theme: 'bootstrap4' }); })
+        $(()=>{ $('#{{$id}}').select2({ theme: 'bootstrap4' }); })
     </script>
 @endsection

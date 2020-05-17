@@ -19,7 +19,6 @@ class Textarea extends Component
             $rows = '10'
         )
     {
-        $this->type = $type;
         $this->id = $id;
         $this->name = $name;
         $this->label = $label;

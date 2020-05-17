@@ -17,6 +17,6 @@
 @section('js')
     @parent
     <script>
-        $(()=>{ $('{{$id}}').selectpicker(); })
+        $(()=>{ $('#{{$id}}').selectpicker(); })
     </script>
 @endsection

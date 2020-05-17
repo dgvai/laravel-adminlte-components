@@ -17,7 +17,6 @@ class Select2 extends Component
             $disabled = false, $required = false, $multiple = false
         )
     {
-        $this->type = $type;
         $this->id = $id;
         $this->name = $name;
         $this->label = $label;

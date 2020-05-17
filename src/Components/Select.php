@@ -17,7 +17,6 @@ class Select extends Component
             $disabled = false, $required = false, $multiple = false
         )
     {
-        $this->type = $type;
         $this->id = $id;
         $this->name = $name;
         $this->label = $label;
@@ -30,6 +29,6 @@ class Select extends Component
 
     public function render()
     {
-        return view('xdg::select2');
+        return view('xdg::select');
     }
 }
