@@ -436,7 +436,6 @@ $(()=>{
 | id          | Input ID                        | null        | string  |
 | name        | Input name                      | null        | string  |
 | label       | Input Label                     | Input Label | string  |
-| placeholder | Input placeholder               | null        | string  |
 | topclass    | class along with 'fomr-group'   | null        | string  |
 | inputclass  | class along with 'form-control' | null        | string  |
 | disabled    | is disabled?                    | false       | boolean |
@@ -467,7 +466,6 @@ $(()=>{
 | id          | Input ID                        | null        | string  |
 | name        | Input name                      | null        | string  |
 | label       | Input Label                     | Input Label | string  |
-| placeholder | Input placeholder               | null        | string  |
 | topclass    | class along with 'fomr-group'   | null        | string  |
 | inputclass  | class along with 'form-control' | null        | string  |
 | disabled    | is disabled?                    | false       | boolean |
@@ -498,7 +496,6 @@ $(()=>{
 | id          | Input ID                        | null        | string  |
 | name        | Input name                      | null        | string  |
 | label       | Input Label                     | Input Label | string  |
-| placeholder | Input placeholder               | null        | string  |
 | topclass    | class along with 'fomr-group'   | null        | string  |
 | inputclass  | class along with 'form-control' | null        | string  |
 | disabled    | is disabled?                    | false       | boolean |
@@ -571,9 +568,10 @@ $(()=>{
 **ALL AVAILABLE ATTRIBUTES**  
 | ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
 |-------------|---------------------------------|-------------|---------|
-| type      | button type: success, primary, ...,etc | info    | string |
-| label     | button label                           | Submit  | string |
+| type        | button type: success, primary, ...,etc | info    | string |
 | topclass    | class along with 'fomr-group'   | null        | string  |
+| label       | button label                           | Submit  | string |
+| icon        | button icon                     | fas fa-save  | string |
 | inputclass  | class along with 'form-control' | null        | string  |
 
 ## Summary
