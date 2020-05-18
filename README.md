@@ -35,6 +35,7 @@ This package contains [Laravel Blade Components](https://laravel.com/docs/7.x/bl
             - [INPUT-FILE](#input-file)
             - [INPUT-COLOR](#input-color)
             - [INPUT-DATE](#input-date)
+            - [DATE-RANGE](#date-range)
             - [INPUT-SWITCH](#input-switch)
             - [INPUT-TAG](#input-tag)
             - [SELECT](#select)
@@ -375,6 +376,33 @@ $(()=>{
 | disabled    | is disabled?                    | false       | boolean |
 | required    | is required?                    | false       | boolean |
 | format      | [Moment.js](https://momentjs.com/docs/#/displaying/format/) datetime format       | YYYY-MM-DD  | string  |
+
+#### DATE-RANGE
+**REQUIRES**  
+[datetimepicker](https://www.daterangepicker.com/) 
+
+**USAGE**
+```html
+<x-dg-date-range id="picker" callback="console.log('this is callback function')" />
+```
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| id          | Input ID                        | null        | string  |
+| title       | Input Title                     | Filter Range        | string  |
+| icon        | Icon                            | far fa-calendar-alt | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| init   | The initial position of range, (0-5) * | 2        | integer  |
+| callback  | The JS callback function to run on change filter | null | string (js)  |
+
+**\* init**  
+0 - Today  
+1 - Yesterday  
+2 - Last 7 Days  
+3 - Last 30 Days  
+4 - This Month  
+5 - Last Month  
+
 
 #### INPUT-SWITCH
 **REQUIRES**  

@@ -43,6 +43,7 @@ class BladeAdminLTEServiceProvider extends ServiceProvider
         Blade::component('dg-input-tag', Components\InputTag::class);
         Blade::component('dg-submit', Components\Submit::class);
         Blade::component('dg-text-editor', Components\TextEditor::class);
+        Blade::component('dg-date-range', Components\DateRange::class);
 
         /**
          * WIDGETS
