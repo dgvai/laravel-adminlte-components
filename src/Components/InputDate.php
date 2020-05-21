@@ -19,7 +19,6 @@ class InputDate extends Component
             $format = 'YYYY-MM-DD'
         )
     {
-        $this->type = $type;
         $this->id = $id;
         $this->name = $name;
         $this->label = $label;

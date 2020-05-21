@@ -2,7 +2,7 @@
     <label for="{{$id}}">{{$label}}</label>
     <div class="input-group" id="{{$id}}-picker">
         <input type="text" class="{{$inputclass}} form-control @error($name) is-invalid @enderror" 
-        name="{{$name}}" id="{{$id}}" value="{{$value}}" 
+        name="{{$name}}" id="{{$id}}" value="{{$value}}" placeholder="{{$placeholder}}"
         {{($required) ? 'required' : '' }}
         {{($disabled) ? 'disabled' : '' }}>
 

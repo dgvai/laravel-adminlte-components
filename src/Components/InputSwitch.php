@@ -11,13 +11,12 @@ class InputSwitch extends Component
     public $checked, $disabled, $required;
 
     public function __construct(
-            $id = null, $name = null,
+            $id = 'checkbox', $name = null,
             $label = 'Input Label',
             $topclass = null, $inputclass = null,
             $checked = false, $disabled = false, $required = false
         )
     {
-        $this->type = $type;
         $this->id = $id;
         $this->name = $name;
         $this->label = $label;

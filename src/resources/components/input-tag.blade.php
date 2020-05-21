@@ -1,6 +1,6 @@
 <div class="form-group {{$topclass}}">
     <label for="{{$id}}">{{$label}}</label>
-    <input type="text" class="{{$inputclass}}" 
+    <input type="text" class="form-control {{$inputclass}}" 
     data-role="tagsinput" id="{{$id}}" name="{{$name}}"
     {{($required) ? 'required' : '' }} 
     {{($disabled) ? 'disabled' : '' }} />

@@ -17,7 +17,6 @@ class InputTag extends Component
             $disabled = false, $required = false, $max = 10
         )
     {
-        $this->type = $type;
         $this->id = $id;
         $this->name = $name;
         $this->label = $label;

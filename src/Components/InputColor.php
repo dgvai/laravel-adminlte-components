@@ -17,7 +17,6 @@ class InputColor extends Component
             $value = null, $disabled = false, $required = false
         )
     {
-        $this->type = $type;
         $this->id = $id;
         $this->name = $name;
         $this->label = $label;
