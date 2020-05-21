@@ -13,7 +13,7 @@
         $('#{{$id}}').summernote({
             placeholder: '{{$placeholder}}',
             height: {{$height}},
-            fontNames: {!!json_encode($fontarray)!!}
+            fontNames: {!!$fontarray!!}
         });
         @if(!is_null($body))
         $('#{{$id}}').summernote('code','{!!$body!!}');
