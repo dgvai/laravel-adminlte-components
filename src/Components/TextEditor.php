@@ -20,7 +20,6 @@ class TextEditor extends Component
             $height = 500, $fonts = null
         )
     {
-        $this->type = $type;
         $this->id = $id;
         $this->name = $name;
         $this->label = $label;
@@ -34,9 +33,9 @@ class TextEditor extends Component
         $this->fonts = $fonts;
     }
 
-    public function font_array()
+    public function fontarray()
     {
-        return $this->fonts == null ? $def_fonts : $this->fonts;
+        return $this->fonts == null ? json_encode($this->def_fonts) : $this->fonts;
     }
 
     public function render()
