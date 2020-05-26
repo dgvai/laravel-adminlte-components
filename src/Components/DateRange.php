@@ -6,17 +6,18 @@ use Illuminate\View\Component;
 
 class DateRange extends Component
 {
-    public $topclass, $title, $icon, $id;
+    public $topclass, $inputclass, $title, $icon, $id;
     public $init;
     public $callback;
 
     public function __construct(
         $id, $topclass = null, $title = 'Filter Range', $icon = 'far fa-calendar-alt',
-        $init = 2, $callback = null
+        $init = 2, $callback = null, $inputclass = null
         )
     {
         $this->id = $id;
         $this->topclass = $topclass;
+        $this->inputclass = $inputclass;
         $this->title = $title;
         $this->icon = $icon;
         $this->init = $init;

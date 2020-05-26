@@ -1,14 +1,14 @@
 <div class="filter d-flex {{$topclass}}">
     <div class="form-group mr-1">
         <div class="input-group">
-            <button type="button" class="btn btn-default float-right" id="{{$id}}">
+            <button type="button" class="btn btn-default float-right {{$inputclass}}" id="{{$id}}">
                 <i class="{{$icon}}"></i> {{$title}}
                 <i class="fas fa-caret-down"></i>
             </button>
         </div>
     </div>
     <div class="form-group ml-1" style="flex: 1 0 auto">
-        <input type="text" class="form-control" id="range-result" style="border:0;background" disabled>
+        <input type="text" class="form-control" id="range-result" style="border:0;background:transparent" disabled>
     </div>
 </div>
 

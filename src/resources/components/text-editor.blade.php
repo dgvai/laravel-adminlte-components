@@ -13,6 +13,8 @@
         $('#{{$id}}').summernote({
             placeholder: '{{$placeholder}}',
             height: {{$height}},
+			dialogsInBody: true,
+			dialogsFade: false,
             fontNames: {!!$fontarray!!}
         });
         @if(!is_null($body))
