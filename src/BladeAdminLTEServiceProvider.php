@@ -22,6 +22,10 @@ class BladeAdminLTEServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/resources/components' => base_path('resources/views/vendor/adminlte-components'),
         ], 'adminlte-dg-components');
+
+        $this->publishes([
+            __DIR__.'/assets' => public_path('vendor/dg-plugins'),
+        ], 'adminlte-dg-plugins');
     }
 
     private function loadComponents()
@@ -44,6 +48,7 @@ class BladeAdminLTEServiceProvider extends ServiceProvider
         Blade::component('dg-submit', Components\Submit::class);
         Blade::component('dg-text-editor', Components\TextEditor::class);
         Blade::component('dg-date-range', Components\DateRange::class);
+        Blade::component('dg-input-slider', Components\InputSlider::class);
 
         /**
          * WIDGETS

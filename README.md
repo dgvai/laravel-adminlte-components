@@ -17,6 +17,7 @@ This package contains [Laravel Blade Components](https://laravel.com/docs/7.x/bl
 - [AdminLTE Blade Components for Laravel 7+](#adminlte-blade-components-for-laravel-7)
     - [Contents](#contents)
     - [Installation](#installation)
+    - [Extract Plugins](#extract-plugins)
     - [Configurations](#configurations)
     - [Components](#components)
         - [Widgets](#widgets)
@@ -38,6 +39,7 @@ This package contains [Laravel Blade Components](https://laravel.com/docs/7.x/bl
             - [DATE-RANGE](#date-range)
             - [INPUT-SWITCH](#input-switch)
             - [INPUT-TAG](#input-tag)
+            - [INPUT-SLIDER](#input-slider)
             - [SELECT](#select)
             - [SELECT2](#select2)
             - [SELECT-ICON](#select-icon)
@@ -58,10 +60,121 @@ You can install the package via composer:
     composer require dgvai/laravel-adminlte-components
 ```
 
+## Extract Plugins
+``` bash
+    php artisan vendor:publish --tag=adminlte-dg-plugins
+```
+
 ## Configurations
 You can use this package, stand alone with AdminLTE installed in your app. You just need to add an ``@yield('js')`` at the bottom of your <kbd>master</kbd> blade layout.
 
 Or, if you use [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE) package, then you do not need to add anything at ``master``. I will prefer to use this package.
+
+Use this in the [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE) config: 
+```php 
+        [
+            'name' => 'AdminLTE-Components-DG',
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/select2/css/select2.min.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/select2/css/select2-bootstrap4.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/select2/js/select2.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/bs-custom-file-input/bs-custom-file-input.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/moment/moment.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/summernote/summernote-bs4.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/summernote/summernote-bs4.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/bs-select/css/bootstrap-select.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/bs-select/js/bootstrap-select.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/bootstrap-tags-input/bootstrap-tagsinput.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/bootstrap-tags-input/bootstrap-tagsinput.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/daterangepicker/daterangepicker.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/daterangepicker/daterangepicker.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/bootstrap-slider/css/bootstrap-slider.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '/vendor/dg-plugins/bootstrap-slider/js/bootstrap-slider.min.js',
+                ],
+            ],
+        ],
+
+```
 
 ## Components
 
@@ -392,6 +505,7 @@ $(()=>{
 | title       | Input Title                     | Filter Range        | string  |
 | icon        | Icon                            | far fa-calendar-alt | string  |
 | topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass    | class along with 'filter button'   | null        | string  |
 | init   | The initial position of range, (0-5) * | 2        | integer  |
 | callback  | The JS callback function to run on change filter | null | string (js)  |
 
@@ -447,6 +561,34 @@ $(()=>{
 | disabled    | is disabled?                    | false       | boolean |
 | required    | is required?                    | false       | boolean |
 | max         | max tag count                   | 10          | integer |
+
+#### INPUT-SLIDER
+**REQUIRES**  
+[bootstrap-slider](https://github.com/seiyria/bootstrap-slider)  
+
+**USAGE**
+```html
+<x-dg-input-slider id="myID"/>
+```
+
+**ALL AVAILABLE ATTRIBUTES**  
+| ATTRIBUTE   | DETAILS                         | DEFAULT     | TYPE    |
+|-------------|---------------------------------|-------------|---------|
+| id          | Input ID                        | none        | string  |
+| name        | Input name                      | null        | string  |
+| label       | Input Label                     | Input Label | string  |
+| topclass    | class along with 'fomr-group'   | null        | string  |
+| inputclass  | class along with 'form-control' | null        | string  |
+| disabled    | is disabled?                    | false       | boolean |
+| required    | is required?                    | false       | boolean |
+| min         | minimum                         | 0           | signed int |
+| max         | maximum                         | 100           | signed int |
+| value         | value                         | null           | string |
+| color         | blue, green, red, teal, yellow, purple | blue  | string |
+| tick         | Enable Tick? | false  | boolean |
+| ticks         | Ticks : [0, 10, 20, ...] | null  | string |
+| tickLabels         | Tick Labels : ["low", "medium", "high" ...] | null  | string |
+| vertical         | Is vertical? | false  | boolean |
 
 
 #### SELECT 
