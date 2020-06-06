@@ -18,7 +18,7 @@
             fontNames: {!!$fontarray!!}
         });
         @if(!is_null($body))
-        $('#{{$id}}').summernote('code','{!!$body!!}');
+        $('#{{$id}}').summernote('code',`{!!$body!!}`);
         @endif
     })
 </script>
