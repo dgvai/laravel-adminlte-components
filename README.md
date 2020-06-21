@@ -19,22 +19,10 @@ This package contains [Laravel Blade Components](https://laravel.com/docs/7.x/bl
     - [Installation](#installation)
     - [Extract Plugins](#extract-plugins)
     - [Configurations](#configurations)
-    - [Components](#components)
-        - [Widgets](#widgets)
-            - [**INFO BOX**](#info-box)
-            - [**SMALL BOX**](#small-box)
-            - [**CARDS**](#cards)
-            - [**ALERT**](#alert)
             - [**CALLOUT**](#callout)
             - [**PROGRESS**](#progress)
             - [**PROFILE FLAT**](#profile-flat)
             - [**PROFILE WIDGET**](#profile-widget)
-            - [**MODAL**](#modal)
-            - [**DATATABLE**](#datatable)
-        - [Form Components](#form-components)
-            - [INPUT](#input)
-            - [INPUT-FILE](#input-file)
-            - [INPUT-COLOR](#input-color)
             - [INPUT-DATE](#input-date)
             - [DATE-RANGE](#date-range)
             - [INPUT-SWITCH](#input-switch)
@@ -421,6 +409,11 @@ $(()=>{
 | value       | Input value                     | null        | string  |
 | disabled    | is disabled?                    | false       | boolean |
 | required    | is required?                    | false       | boolean |
+| step        | attr: step                      | null        | string |
+| max        | attr: max                      | null        | string |
+| maxlength        | attr: maxlength                      | null        | string |
+| pattern        | attr: pattern                      | null        | string |
+
 
 #### INPUT-FILE
 **REQUIRES**  
