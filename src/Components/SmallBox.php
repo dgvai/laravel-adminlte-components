@@ -7,12 +7,14 @@ use Illuminate\View\Component;
 class SmallBox extends Component
 {
     public $bg, $icon, $title, $text, $url, $urlText, $loading;
+    public $id;
 
     public function __construct(
-        $bg = 'info', $icon = 'fas fa-star', $title, 
+        $bg = 'info', $icon = 'fas fa-star', $title, $id = null,
         $text, $url='#', $urlText = null, 
         $loading = false)
     {
+        $this->id = $id;
         $this->bg = $bg;
         $this->icon = $icon;
         $this->title = $title;
