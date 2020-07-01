@@ -19,10 +19,22 @@ This package contains [Laravel Blade Components](https://laravel.com/docs/7.x/bl
     - [Installation](#installation)
     - [Extract Plugins](#extract-plugins)
     - [Configurations](#configurations)
+    - [Components](#components)
+        - [Widgets](#widgets)
+            - [**INFO BOX**](#info-box)
+            - [**SMALL BOX**](#small-box)
+            - [**CARDS**](#cards)
+            - [**ALERT**](#alert)
             - [**CALLOUT**](#callout)
             - [**PROGRESS**](#progress)
             - [**PROFILE FLAT**](#profile-flat)
             - [**PROFILE WIDGET**](#profile-widget)
+            - [**MODAL**](#modal)
+            - [**DATATABLE**](#datatable)
+        - [Form Components](#form-components)
+            - [INPUT](#input)
+            - [INPUT-FILE](#input-file)
+            - [INPUT-COLOR](#input-color)
             - [INPUT-DATE](#input-date)
             - [DATE-RANGE](#date-range)
             - [INPUT-SWITCH](#input-switch)
@@ -185,11 +197,36 @@ Use this in the [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/La
 | icon      | The fontawesome icon class. Eg. ``fas fa-star``, ``fas fa-user-plus``                      | false    | string  |
 | grad      | Use gradient color? ``true/false``                                                         | false    | boolean |
 | full      | Use full INFO BOX? ``true/false``                                                          | false    | boolean |
+| progress      | Show Progress bar?                                                          | false    | int |
+| comment      | Show comment?                                                           | false    | string |
+| id      | Dynamic Binding?                                                          | false    | string |
 
 **EXAMPLE**
 ```html
 <x-dg-info-box bg="success" title="Yo title" text="123" icon="fas fa-star" :full="true" :grad="true"/>
 ```
+
+**DYNAMIC BINDINGS**  
+Set ``id`` attibute, this will enable dynamic attributes for:
+| ID |
+|----|
+|#{id}-title|
+|#{id}-text|
+|#{id}-progress|
+|#{id}-comment|
+
+**EXAMPLE**
+```html
+<x-dg-info-box bg="success" title="Users" text="100" icon="fas fa-star" :full="true" :grad="true" id="userbox" />
+
+<script>
+    $(()=>{
+        $('#userbox-title').text('Users');
+        $('#userbox-text').text('102');
+    });
+</script>
+```
+
 
 #### **SMALL BOX**  
 ![Small Box](assets/small-box.png)
@@ -208,10 +245,31 @@ Use this in the [jeroennoten/Laravel-AdminLTE](https://github.com/jeroennoten/La
 | url       | The url to follow.                                                                         | false    | string  |
 | urlText   | Text of the HyperLink.                                                                     | false    | string  |
 | loading   | Set loading state ``true/false``                                                           | false    | boolean |
+| id      | Dynamic Binding?                                                          | false    | string |
 
 **EXAMPLE**
 ```html
 <x-dg-small-box title="Small box" text="500" bg="warning" url="#" urlText="See More" loading="false" />
+```
+
+**DYNAMIC BINDINGS**  
+Set ``id`` attibute, this will enable dynamic attributes for:
+| ID |
+|----|
+|#{id}-title|
+|#{id}-text|
+|#{id}-link|
+
+**EXAMPLE**
+```html
+<x-dg-small-box title="Small box" text="500" bg="warning" url="#" urlText="See More" loading="false" $id="userbox"/>
+
+<script>
+    $(()=>{
+        $('#userbox-text').text('102');
+        $('#userbox-link').attr('href',new.link);
+    });
+</script>
 ```
 
 #### **CARDS**  
@@ -409,11 +467,6 @@ $(()=>{
 | value       | Input value                     | null        | string  |
 | disabled    | is disabled?                    | false       | boolean |
 | required    | is required?                    | false       | boolean |
-| step        | attr: step                      | null        | string |
-| max        | attr: max                      | null        | string |
-| maxlength        | attr: maxlength                      | null        | string |
-| pattern        | attr: pattern                      | null        | string |
-
 
 #### INPUT-FILE
 **REQUIRES**  
