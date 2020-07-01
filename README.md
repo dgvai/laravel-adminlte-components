@@ -467,6 +467,10 @@ $(()=>{
 | value       | Input value                     | null        | string  |
 | disabled    | is disabled?                    | false       | boolean |
 | required    | is required?                    | false       | boolean |
+| step    | HTML Attr: step                    | false       | int |
+| max    | HTML Attr: max                    | false       | int |
+| maxlength    | HTML Attr: maxlength                    | false       | int |
+| pattern    | HTML Attr: pattern                    | false       | regex |
 
 #### INPUT-FILE
 **REQUIRES**  

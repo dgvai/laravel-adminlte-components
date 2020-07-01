@@ -2,7 +2,18 @@
     <label for="{{$id}}">{{$label}}</label>
     <input type="{{$type}}" class="{{$inputclass}} form-control @error($name) is-invalid @enderror" 
     id="{{$id}}" name="{{$name}}" placeholder="{{$placeholder}}" 
-    step="{{$step}}" max="{{$max}}" maxlength="{{$maxlength}}" pattern="{{$pattern}}"
+    @if(!is_null($step))
+    step="{{$step}}"
+    @endif
+    @if(!is_null($max))
+    max="{{$max}}"
+    @endif
+    @if(!is_null($maxlength))
+    maxlength="{{$maxlength}}"
+    @endif
+    @if(!is_null($pattern))
+    pattern="{{$pattern}}"
+    @endif
     value="{{$value}}" 
     {{($required) ? 'required' : '' }} 
     {{($disabled) ? 'disabled' : '' }}>
