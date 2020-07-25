@@ -46,6 +46,7 @@ This package contains [Laravel Blade Components](https://laravel.com/docs/7.x/bl
             - [TEXTAREA](#textarea)
             - [TEXT-EDITOR](#text-editor)
             - [SUBMIT](#submit)
+    - [Example Codes](#example-codes)
     - [Summary](#summary)
     - [Changelog](#changelog)
     - [License](#license)
@@ -445,6 +446,10 @@ $(()=>{
 | hoverable | is hoverable? ``true/false``  | false    | boolean |
 | condensed | is condensed? ``true/false``  | false    | boolean |
 | footer    | has footer? ``true/false``    | false    | boolean |
+| buttons    | has buttons (print/export)? ``true/false``    | false    | boolean |
+
+**ACKNOWLEDGEMENTS**
+Use ``Dom : 'Blftrip'`` while using buttons. See Examples to be more clear!
 
 ### Form Components
 
@@ -793,6 +798,9 @@ $(()=>{
 | label       | button label                           | Submit  | string |
 | icon        | button icon                     | fas fa-save  | string |
 | inputclass  | class along with 'form-control' | null        | string  |
+
+## Example Codes
+You can browse through the examples of advanced usages from [examples](examples/) directory. 
 
 ## Summary
 This document might not be well-documented. I will happily accept any documentation pull-requests.  
