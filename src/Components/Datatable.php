@@ -6,7 +6,7 @@ use Illuminate\View\Component;
 
 class Datatable extends Component
 {
-    public $beautify;
+    public $beautify, $buttons;
     public $id;
     public $bordered, $hoverable, $condensed;
     public $heads, $footer;
@@ -14,7 +14,7 @@ class Datatable extends Component
     public function __construct(
         $beautify = true, $id,
         $bordered = true, $hoverable = true, $condensed = false,
-        $heads, $footer = false
+        $heads, $footer = false, $buttons = false
         )
     {
         $this->id = $id;
@@ -24,6 +24,7 @@ class Datatable extends Component
         $this->condensed = $condensed;
         $this->heads = json_decode(json_encode($heads));
         $this->footer = $footer;
+        $this->buttons = $buttons;
     }
 
     public function border()
