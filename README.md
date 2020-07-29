@@ -263,7 +263,7 @@ Set ``id`` attibute, this will enable dynamic attributes for:
 
 **EXAMPLE**
 ```html
-<x-dg-small-box title="Small box" text="500" bg="warning" url="#" urlText="See More" loading="false" $id="userbox"/>
+<x-dg-small-box title="Small box" text="500" bg="warning" url="#" urlText="See More" loading="false" id="userbox"/>
 
 <script>
     $(()=>{
